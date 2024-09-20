@@ -16,7 +16,7 @@ async function run() {
 
     const octokit = github.getOctokit(token)
 
-    const { data: changeFiles } = await octokit.pull.listFiles({
+    const { data: changeFiles } = await octokit.pulls.listFiles({
       owner,
       repo,
       pull_number: prNumber
